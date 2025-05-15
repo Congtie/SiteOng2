@@ -113,43 +113,6 @@ function openFormular230() {
       FORMular230.open();
     }
   }
-  
-  setTimeout(function() {
-    if (!document.getElementById('closeFormular230Button')) {
-      const closeButton = document.createElement('button');
-      closeButton.id = 'closeFormular230Button';
-      closeButton.innerHTML = '✖';
-      closeButton.style.position = 'fixed';
-      closeButton.style.top = '10px';
-      closeButton.style.right = '10px';
-      closeButton.style.zIndex = '10001';
-      closeButton.style.backgroundColor = '#f44336';
-      closeButton.style.color = 'white';
-      closeButton.style.border = 'none';
-      closeButton.style.borderRadius = '50%';
-      closeButton.style.width = '40px';
-      closeButton.style.height = '40px';
-      closeButton.style.fontSize = '20px';
-      closeButton.style.cursor = 'pointer';
-      closeButton.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';
-      
-      closeButton.addEventListener('click', function() {
-        const overlay = document.querySelector('div[style*="z-index"]');
-        if (overlay) overlay.style.display = 'none';
-        
-        const iframes = document.querySelectorAll('iframe[src*="formular230.ro"]');
-        if (iframes.length > 0) {
-          iframes.forEach(iframe => {
-            iframe.style.display = 'none';
-          });
-        }
-        
-        this.style.display = 'none';
-      });
-      
-      document.body.appendChild(closeButton);
-    }
-  }, 1000);
 }
 document.getElementById('tax-deduction-link').addEventListener('click', function(e) {
   e.preventDefault();
