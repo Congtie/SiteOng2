@@ -111,7 +111,7 @@
             </div>
             <div class="project-content">
               <h3>Asistență juridică pentru VICTIMELE INFRACTIUNILOR VIOLENTE</h3>
-              <p>Copii victime directe, copii orfani, copii martori la violență, sprijin pentru familiile copiilor uciși</p>
+              <p>Copii victime directe, copii orfani, copii martori la violență, sprijin pentru familiile copiilor uciși</p>
               <a href="#" class="read-more">Află mai multe</a>
             </div>
           </article>
@@ -123,7 +123,6 @@
       <div class="container">
         <h2 class="section-title">Evenimente Viitoare</h2>
         <div class="events-list" id="evenimente-lista">
-          <!-- Evenimente vor fi adăugate dinamic prin JavaScript -->
         </div>
       </div>
     </section>
@@ -290,30 +289,6 @@
     </div>
   </footer>
 
-  <script>
-    // Mobile Menu Toggle
-    const mobileMenuIcon = document.getElementById('mobile-menu-icon');
-    const navList = document.getElementById('nav-list');
-
-    mobileMenuIcon.addEventListener('click', function() {
-      if(navList.style.display === "flex") {
-        navList.style.display = "none";
-      } else {
-        navList.style.display = "flex";
-        navList.style.flexDirection = "column";
-      }
-    });
-
-    // Close mobile menu on link click
-    const navLinks = document.querySelectorAll('#nav-list li a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        if(window.innerWidth <= 768) {
-          navList.style.display = "none";
-        }
-      });
-    });
-  </script>
   <script src="script.js"></script>
 </body>
 </html>
