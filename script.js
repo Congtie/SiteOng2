@@ -25,10 +25,10 @@ function openFormular230() {
         if (typeof FORMular230 !== 'undefined') {
           try {
             FORMular230.open({
-              width: '90%',
-              height: '90%',
-              maxWidth: '1000px',
-              maxHeight: '800px'
+              width: '100vw',
+              height: '100vh',
+              maxWidth: '100vw',
+              maxHeight: '100vh'
             });
           } catch(e) {
             FORMular230.open();
@@ -36,15 +36,15 @@ function openFormular230() {
               const iframes = document.querySelectorAll('iframe[src*="formular230.ro"]');
               if (iframes.length > 0) {
                 iframes.forEach(iframe => {
-                  iframe.style.width = '90vw';
-                  iframe.style.height = '90vh';
-                  iframe.style.maxWidth = '1000px';
-                  iframe.style.maxHeight = '800px';
+                  iframe.style.width = '100vw';
+                  iframe.style.height = '100vh';
+                  iframe.style.maxWidth = '100vw';
+                  iframe.style.maxHeight = '100vh';
                   if (iframe.parentElement) {
-                    iframe.parentElement.style.width = '90vw';
-                    iframe.parentElement.style.height = '90vh';
-                    iframe.parentElement.style.maxWidth = '1000px';
-                    iframe.parentElement.style.maxHeight = '800px';
+                    iframe.parentElement.style.width = '100vw';
+                    iframe.parentElement.style.height = '100vh';
+                    iframe.parentElement.style.maxWidth = '100vw';
+                    iframe.parentElement.style.maxHeight = '100vh';
                   }
                 });
               }
@@ -57,10 +57,10 @@ function openFormular230() {
   } else {
     try {
       FORMular230.open({
-        width: '90%',
-        height: '90%',
-        maxWidth: '1000px',
-        maxHeight: '800px'
+        width: '100vw',
+        height: '100vh',
+        maxWidth: '100vw',
+        maxHeight: '100vh'
       });
     } catch(e) {
       FORMular230.open();
@@ -68,15 +68,15 @@ function openFormular230() {
         const iframes = document.querySelectorAll('iframe[src*="formular230.ro"]');
         if (iframes.length > 0) {
           iframes.forEach(iframe => {
-            iframe.style.width = '90vw';
-            iframe.style.height = '90vh';
-            iframe.style.maxWidth = '1000px';
-            iframe.style.maxHeight = '800px';
+            iframe.style.width = '100vw';
+            iframe.style.height = '100vh';
+            iframe.style.maxWidth = '100vw';
+            iframe.style.maxHeight = '100vh';
             if (iframe.parentElement) {
-              iframe.parentElement.style.width = '90vw';
-              iframe.parentElement.style.height = '90vh';
-              iframe.parentElement.style.maxWidth = '1000px';
-              iframe.parentElement.style.maxHeight = '800px';
+              iframe.parentElement.style.width = '100vw';
+              iframe.parentElement.style.height = '100vh';
+              iframe.parentElement.style.maxWidth = '100vw';
+              iframe.parentElement.style.maxHeight = '100vh';
             }
           });
         }
