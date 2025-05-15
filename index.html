@@ -7,23 +7,6 @@
   <meta name="description" content="Împreună pentru Viitor - ONG dedicat sprijinirii comunităților vulnerabile prin educație, sănătate, protecția mediului și parteneriate durabile.">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    /* Stiluri pentru overlay-ul formularului */
-    .formular230-overlay {
-      width: 90% !important;
-      height: 90% !important;
-      max-width: 1000px !important;
-      max-height: 800px !important;
-    }
-    
-    /* Stiluri pentru iframe-ul formularului */
-    iframe[src*="formular230.ro"] {
-      width: 90vw !important;
-      height: 90vh !important;
-      max-width: 1000px !important;
-      max-height: 800px !important;
-    }
-  </style>
 </head>
 <body>
   <header role="banner">
@@ -49,7 +32,6 @@
       </nav>
     </div>
   </header>
-
   <main>
     <section id="acasa" class="hero" role="region" aria-label="Hero Section">
       <div class="container">
@@ -59,12 +41,11 @@
           <div class="hero-buttons">
             <a href="#implica-te" class="btn btn-primary">Implică-te</a>
             <a href="#donatii" class="btn btn-orange">Donează</a>
-            <a href="#tax-deduction" class="btn btn-secondary" onclick="openFormular230(); return false;">Redirecționează 3,5% din impozit</a>
+            <a href="#tax-deduction" class="btn btn-secondary" id="tax-deduction-link">Redirecționează 3,5% din impozit</a>
           </div>
         </div>
       </div>
     </section>
-
     <section id="despre-noi" class="about" role="region" aria-label="Despre Noi">
       <div class="container">
         <h2 class="section-title">Despre Noi</h2>
@@ -97,7 +78,6 @@
         </div>
       </div>
     </section>
-
     <section id="proiecte" class="projects" role="region" aria-label="Proiecte Noastre">
       <div class="container">
         <h2 class="section-title">Proiectele Noastre</h2>
@@ -135,15 +115,12 @@
         </div>
       </div>
     </section>
-
     <section id="evenimente" class="events" role="region" aria-label="Evenimente Viitoare">
       <div class="container">
         <h2 class="section-title">Evenimente Viitoare</h2>
-        <div class="events-list" id="evenimente-lista">
-        </div>
+        <div class="events-list" id="evenimente-lista"></div>
       </div>
     </section>
-
     <section id="implica-te" class="get-involved" role="region" aria-label="Implică-te">
       <div class="container">
         <h2 class="section-title">Implică-te</h2>
@@ -159,7 +136,7 @@
             <h3>Donează</h3>
             <p>Sprijinul tău financiar ne ajută să continuăm proiectele și să extindem impactul nostru în comunitate.</p>
             <a href="#" class="btn btn-primary">Donează în RON, EURO, USD</a>
-            <a href="#" class="btn btn-primary" id="tax-deduction-btn" onclick="openFormular230(); return false;">Redirecționează 3.5% din impozit</a>
+            <a href="#" class="btn btn-primary" id="tax-deduction-btn">Redirecționează 3.5% din impozit</a>
           </article>
           <article class="involvement-card">
             <i class="fas fa-users" aria-hidden="true"></i>
@@ -170,7 +147,6 @@
         </div>
       </div>
     </section>
-
     <section id="testimoniale" class="testimonials" role="region" aria-label="Testimoniale">
       <div class="container">
         <h2 class="section-title">Ce Spun Partenerii Noștri</h2>
@@ -206,7 +182,6 @@
         </div>
       </div>
     </section>
-
     <section id="contact" class="contact" role="region" aria-label="Contact">
       <div class="container">
         <h2 class="section-title">Contact</h2>
@@ -235,32 +210,27 @@
             </div>
             <div class="social-media">
               <h3>Urmărește-ne</h3>
-              <div class="social-icons">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              </div>
+              <div class="social-icons"></div>
             </div>
           </div>
           <div class="contact-form">
             <h3>Trimite-ne un mesaj</h3>
             <form id="contact-form">
               <div class="form-group">
-                <label for="name">Nume</label>
-                <input type="text" id="name" name="name" required aria-required="true" />
+                <label for="nume">Nume</label>
+                <input type="text" id="nume" name="nume" required>
               </div>
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required aria-required="true" />
+                <input type="email" id="email" name="email" required>
               </div>
               <div class="form-group">
-                <label for="subject">Subiect</label>
-                <input type="text" id="subject" name="subject" required aria-required="true" />
+                <label for="subiect">Subiect</label>
+                <input type="text" id="subiect" name="subiect" required>
               </div>
               <div class="form-group">
-                <label for="message">Mesaj</label>
-                <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                <label for="mesaj">Mesaj</label>
+                <textarea id="mesaj" name="mesaj" rows="5" required></textarea>
               </div>
               <button type="submit" class="btn btn-primary">Trimite mesajul</button>
             </form>
@@ -269,7 +239,6 @@
       </div>
     </section>
   </main>
-
   <footer role="contentinfo">
     <div class="container">
       <div class="footer-content">
@@ -305,7 +274,6 @@
       </div>
     </div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
