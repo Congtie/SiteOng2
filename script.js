@@ -24,31 +24,34 @@ function openFormular230() {
       setTimeout(function() {
         if (typeof FORMular230 !== 'undefined') {
           try {
-            FORMular230.open({
-              width: '100vw',
-              height: '100vh',
-              maxWidth: '100vw',
-              maxHeight: '100vh'
-            });
-          } catch(e) {
             FORMular230.open();
             setTimeout(function() {
               const iframes = document.querySelectorAll('iframe[src*="formular230.ro"]');
               if (iframes.length > 0) {
                 iframes.forEach(iframe => {
+                  iframe.style.position = 'fixed';
+                  iframe.style.top = '0';
+                  iframe.style.left = '0';
                   iframe.style.width = '100vw';
                   iframe.style.height = '100vh';
                   iframe.style.maxWidth = '100vw';
                   iframe.style.maxHeight = '100vh';
+                  iframe.style.zIndex = '9999';
                   if (iframe.parentElement) {
+                    iframe.parentElement.style.position = 'fixed';
+                    iframe.parentElement.style.top = '0';
+                    iframe.parentElement.style.left = '0';
                     iframe.parentElement.style.width = '100vw';
                     iframe.parentElement.style.height = '100vh';
                     iframe.parentElement.style.maxWidth = '100vw';
                     iframe.parentElement.style.maxHeight = '100vh';
+                    iframe.parentElement.style.zIndex = '9999';
                   }
                 });
               }
             }, 500);
+          } catch(e) {
+            FORMular230.open();
           }
         }
       }, 500);
@@ -56,31 +59,34 @@ function openFormular230() {
     document.head.appendChild(script);
   } else {
     try {
-      FORMular230.open({
-        width: '100vw',
-        height: '100vh',
-        maxWidth: '100vw',
-        maxHeight: '100vh'
-      });
-    } catch(e) {
       FORMular230.open();
       setTimeout(function() {
         const iframes = document.querySelectorAll('iframe[src*="formular230.ro"]');
         if (iframes.length > 0) {
           iframes.forEach(iframe => {
+            iframe.style.position = 'fixed';
+            iframe.style.top = '0';
+            iframe.style.left = '0';
             iframe.style.width = '100vw';
             iframe.style.height = '100vh';
             iframe.style.maxWidth = '100vw';
             iframe.style.maxHeight = '100vh';
+            iframe.style.zIndex = '9999';
             if (iframe.parentElement) {
+              iframe.parentElement.style.position = 'fixed';
+              iframe.parentElement.style.top = '0';
+              iframe.parentElement.style.left = '0';
               iframe.parentElement.style.width = '100vw';
               iframe.parentElement.style.height = '100vh';
               iframe.parentElement.style.maxWidth = '100vw';
               iframe.parentElement.style.maxHeight = '100vh';
+              iframe.parentElement.style.zIndex = '9999';
             }
           });
         }
       }, 500);
+    } catch(e) {
+      FORMular230.open();
     }
   }
 }
