@@ -7,7 +7,23 @@
   <meta name="description" content="Împreună pentru Viitor - ONG dedicat sprijinirii comunităților vulnerabile prin educație, sănătate, protecția mediului și parteneriate durabile.">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <script src="https://formular230.ro/share/7d2614d2f60"></script>
+  <style>
+    /* Stiluri pentru overlay-ul formularului */
+    .formular230-overlay {
+      width: 90% !important;
+      height: 90% !important;
+      max-width: 1000px !important;
+      max-height: 800px !important;
+    }
+    
+    /* Stiluri pentru iframe-ul formularului */
+    iframe[src*="formular230.ro"] {
+      width: 90vw !important;
+      height: 90vh !important;
+      max-width: 1000px !important;
+      max-height: 800px !important;
+    }
+  </style>
 </head>
 <body>
   <header role="banner">
@@ -43,7 +59,7 @@
           <div class="hero-buttons">
             <a href="#implica-te" class="btn btn-primary">Implică-te</a>
             <a href="#donatii" class="btn btn-orange">Donează</a>
-            <a href="#tax-deduction" class="btn btn-secondary" onclick="FORMular230.open()">Redirecționează 3,5% din impozit</a>
+            <a href="#tax-deduction" class="btn btn-secondary" onclick="openFormular230(); return false;">Redirecționează 3,5% din impozit</a>
           </div>
         </div>
       </div>
@@ -143,7 +159,7 @@
             <h3>Donează</h3>
             <p>Sprijinul tău financiar ne ajută să continuăm proiectele și să extindem impactul nostru în comunitate.</p>
             <a href="#" class="btn btn-primary">Donează în RON, EURO, USD</a>
-            <a href="#" class="btn btn-primary" id="tax-deduction-btn" onclick="FORMular230.open()">Redirecționează 3.5% din impozit</a>
+            <a href="#" class="btn btn-primary" id="tax-deduction-btn" onclick="openFormular230(); return false;">Redirecționează 3.5% din impozit</a>
           </article>
           <article class="involvement-card">
             <i class="fas fa-users" aria-hidden="true"></i>
