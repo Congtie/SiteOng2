@@ -122,3 +122,49 @@ document.getElementById('tax-deduction-btn').addEventListener('click', function(
   e.preventDefault();
   openFormular230();
 });
+
+// Initialize social media icons
+document.addEventListener('DOMContentLoaded', function() {
+  const socialIconsContainer = document.querySelector('.social-icons');
+  
+  // Social media links
+  const socialLinks = [
+    { icon: 'fa-facebook-f', url: 'https://facebook.com/' },
+    { icon: 'fa-instagram', url: 'https://instagram.com/' },
+    { icon: 'fa-twitter', url: 'https://twitter.com/' },
+    { icon: 'fa-linkedin-in', url: 'https://linkedin.com/' }
+  ];
+  
+  // Create social media icons
+  socialLinks.forEach(social => {
+    const link = document.createElement('a');
+    link.href = social.url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.setAttribute('aria-label', social.icon.replace('fa-', ''));
+    
+    const icon = document.createElement('i');
+    icon.className = `fab ${social.icon}`;
+    
+    link.appendChild(icon);
+    socialIconsContainer.appendChild(link);
+  });
+  
+  // Improve mobile menu accessibility
+  mobileMenuIcon.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      this.click();
+    }
+  });
+});
+
+// Add event listeners for placeholder images
+window.addEventListener('DOMContentLoaded', function() {
+  // Replace placeholder images with actual content
+  const placeholderImages = document.querySelectorAll('img[src^="/api/placeholder"]');
+  placeholderImages.forEach(img => {
+    // Set a default image for placeholders
+    img.src = 'https://via.placeholder.com/' + img.src.split('/').pop();
+  });
+});
