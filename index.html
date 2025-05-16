@@ -9,14 +9,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header role="banner">
+  <header>
     <div class="container">
       <div class="logo">
         <h1>Asociația Dreptate și Educație pentru Toți</h1>
         <p>Organizație Non-Guvernamentală</p>
         <h2 class="logo-abbreviation">ADEPT</h2>
       </div>
-      <nav role="navigation" aria-label="Main Navigation">
+      <nav aria-label="Main Navigation">
         <ul id="nav-list">
           <li><a href="#acasa">Acasă</a></li>
           <li><a href="#despre-noi">Despre Noi</a></li>
@@ -32,8 +32,9 @@
       </nav>
     </div>
   </header>
+  
   <main>
-    <section id="acasa" class="hero" role="region" aria-label="Hero Section">
+    <section id="acasa" class="hero">
       <div class="container">
         <div class="hero-content">
           <h2>Copiii sunt cea mai importantă resursă a omenirii</h2>
@@ -41,17 +42,18 @@
           <div class="hero-buttons">
             <a href="#implica-te" class="btn btn-primary">Implică-te</a>
             <a href="#donatii" class="btn btn-orange">Donează</a>
-            <a href="#tax-deduction" class="btn btn-secondary" id="tax-deduction-link">Redirecționează 3,5% din impozit</a>
+            <a href="#" class="btn btn-secondary" id="tax-deduction-link">Redirecționează 3,5% din impozit</a>
           </div>
         </div>
       </div>
     </section>
-    <section id="despre-noi" class="about" role="region" aria-label="Despre Noi">
+    
+    <section id="despre-noi" class="about">
       <div class="container">
         <h2 class="section-title">Despre Noi</h2>
         <div class="about-content">
           <div class="about-image">
-            <img src="WhatsApp Image 2025-03-26 at 20.27.41_22f7ecc0.jpg" alt="Copil studiind la lumina unei lumânări" />
+            <img src="WhatsApp Image 2025-03-26 at 20.27.41_22f7ecc0.jpg" alt="Copil studiind la lumina unei lumânări">
           </div>
           <div class="about-text">
             <p class="mission-statement">
@@ -64,8 +66,6 @@
                 <li>PROTECȚIA ȘI DREPTURILE COPILULUI</li>
                 <li>FORMARE PENTRU SPECIALIȘTI</li>
                 <li>ACTIVITĂȚI RECREATIVE</li>
-              </ul>
-              <ul>
                 <li>DEZVOLTARE PERSONALĂ</li>
                 <li>VOLUNTARIAT ȘI IMPLICARE COMUNITARĂ</li>
                 <li>SPRIJIN LEGAL ȘI PSIHOLOGIC PENTRU COPII</li>
@@ -73,18 +73,19 @@
             </div>
           </div>
           <div class="about-image">
-            <img src="WhatsApp Image 2025-03-26 at 20.25.23_4507bb3f.jpg" alt="Copii explorând natura împreună cu un adult" />
+            <img src="WhatsApp Image 2025-03-26 at 20.25.23_4507bb3f.jpg" alt="Copii explorând natura împreună cu un adult">
           </div>
         </div>
       </div>
     </section>
-    <section id="proiecte" class="projects" role="region" aria-label="Proiecte Noastre">
+    
+    <section id="proiecte" class="projects">
       <div class="container">
         <h2 class="section-title">Proiectele Noastre</h2>
         <div class="projects-grid">
           <article class="project-card">
             <div class="project-image">
-              <img src="/api/placeholder/300/200" alt="Copii beneficiind de programul Educație pentru Toți" />
+              <img src="/api/placeholder/300/200" alt="Copii beneficiind de programul Educație pentru Toți">
             </div>
             <div class="project-content">
               <h3>Educație pentru Toți</h3>
@@ -94,7 +95,7 @@
           </article>
           <article class="project-card">
             <div class="project-image">
-              <img src="/api/placeholder/300/200" alt="Voluntari plantând copaci în cadrul proiectului de Protecția Mediului" />
+              <img src="/api/placeholder/300/200" alt="Voluntari plantând copaci în cadrul proiectului de Protecția Mediului">
             </div>
             <div class="project-content">
               <h3>Protecția Mediului</h3>
@@ -104,7 +105,7 @@
           </article>
           <article class="project-card">
             <div class="project-image">
-              <img src="/api/placeholder/300/200" alt="Pacienți beneficiind de servicii medicale mobile" />
+              <img src="/api/placeholder/300/200" alt="Pacienți beneficiind de servicii medicale mobile">
             </div>
             <div class="project-content">
               <h3>Asistență juridică pentru VICTIMELE INFRACTIUNILOR VIOLENTE</h3>
@@ -115,31 +116,33 @@
         </div>
       </div>
     </section>
-    <section id="evenimente" class="events" role="region" aria-label="Evenimente Viitoare">
+    
+    <section id="evenimente" class="events">
       <div class="container">
         <h2 class="section-title">Evenimente Viitoare</h2>
         <div class="events-list" id="evenimente-lista"></div>
       </div>
     </section>
-    <section id="implica-te" class="get-involved" role="region" aria-label="Implică-te">
+    
+    <section id="implica-te" class="get-involved">
       <div class="container">
         <h2 class="section-title">Implică-te</h2>
         <div class="involvement-options">
           <article class="involvement-card">
-            <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+            <i class="fas fa-hand-holding-heart"></i>
             <h3>Voluntariat</h3>
             <p>Dedică timpul și abilitățile tale pentru a sprijini cauzele în care crezi. Avem nevoie de voluntari în diverse domenii.</p>
             <a href="#" class="btn btn-small">Devino voluntar</a>
           </article>
           <article class="involvement-card" id="donatii">
-            <i class="fas fa-donate" aria-hidden="true"></i>
+            <i class="fas fa-donate"></i>
             <h3>Donează</h3>
             <p>Sprijinul tău financiar ne ajută să continuăm proiectele și să extindem impactul nostru în comunitate.</p>
             <a href="#" class="btn btn-primary">Donează în RON, EURO, USD</a>
             <a href="#" class="btn btn-primary" id="tax-deduction-btn">Redirecționează 3.5% din impozit</a>
           </article>
           <article class="involvement-card">
-            <i class="fas fa-users" aria-hidden="true"></i>
+            <i class="fas fa-users"></i>
             <h3>Parteneriate</h3>
             <p>Devino partener strategic și împreună putem dezvolta inițiative cu impact mai mare în societate.</p>
             <a href="#" class="btn btn-small">Propune un parteneriat</a>
@@ -147,7 +150,8 @@
         </div>
       </div>
     </section>
-    <section id="biblioteca" class="biblioteca" role="region" aria-label="Biblioteca virtuală">
+    
+    <section id="biblioteca" class="biblioteca">
       <div class="container">
         <h2 class="section-title">Biblioteca Virtuală</h2>
         <div class="biblioteca-content">
@@ -218,7 +222,8 @@
         </div>
       </div>
     </section>
-    <section id="testimoniale" class="testimonials" role="region" aria-label="Testimoniale">
+    
+    <section id="testimoniale" class="testimonials">
       <div class="container">
         <h2 class="section-title">Ce Spun Partenerii Noștri</h2>
         <div class="testimonials-slider">
@@ -227,7 +232,7 @@
               <p>"Colaborarea cu Împreună pentru Viitor a fost o experiență extraordinară. Profesionalismul și dedicarea echipei sunt remarcabile."</p>
             </div>
             <div class="testimonial-author">
-              <img src="/api/placeholder/60/60" alt="Portretul Mariei Popescu" />
+              <img src="/api/placeholder/60/60" alt="Portretul Mariei Popescu">
               <div>
                 <h4>Maria Popescu</h4>
                 <p>Director General, Compania ABC</p>
@@ -239,7 +244,7 @@
               <p>"Proiectele implementate au avut un impact real și măsurabil în comunitatea noastră. Recomand cu încredere această organizație."</p>
             </div>
             <div class="testimonial-author">
-              <img src="/api/placeholder/60/60" alt="Portretul lui Ioan Dumitrescu" />
+              <img src="/api/placeholder/60/60" alt="Portretul lui Ioan Dumitrescu">
               <div>
                 <h4>Ioan Dumitrescu</h4>
                 <p>Primarul Comunei Florești</p>
@@ -248,32 +253,33 @@
           </article>
         </div>
         <div class="testimonial-dots">
-          <span class="dot active" aria-label="Testimonial 1"></span>
-          <span class="dot" aria-label="Testimonial 2"></span>
+          <span class="dot active"></span>
+          <span class="dot"></span>
         </div>
       </div>
     </section>
-    <section id="contact" class="contact" role="region" aria-label="Contact">
+    
+    <section id="contact" class="contact">
       <div class="container">
         <h2 class="section-title">Contact</h2>
         <div class="contact-content">
           <div class="contact-info">
             <div class="contact-item">
-              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <i class="fas fa-map-marker-alt"></i>
               <div>
                 <h3>Adresă</h3>
                 <p>Strada Exemplu nr. 123, București, România</p>
               </div>
             </div>
             <div class="contact-item">
-              <i class="fas fa-phone" aria-hidden="true"></i>
+              <i class="fas fa-phone"></i>
               <div>
                 <h3>Telefon</h3>
                 <p>+40 123 456 789</p>
               </div>
             </div>
             <div class="contact-item">
-              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <i class="fas fa-envelope"></i>
               <div>
                 <h3>Email</h3>
                 <p>contact@impreunapentruviitor.ro</p>
@@ -310,7 +316,8 @@
       </div>
     </section>
   </main>
-  <footer role="contentinfo">
+  
+  <footer>
     <div class="container">
       <div class="footer-content">
         <div class="footer-logo">
@@ -334,7 +341,7 @@
           <h4>Abonează-te la newsletter</h4>
           <p>Primește noutăți despre proiectele și evenimentele noastre.</p>
           <form id="newsletter-form">
-            <input type="email" placeholder="Adresa ta de email" required aria-required="true" />
+            <input type="email" placeholder="Adresa ta de email" required>
             <button type="submit">Abonează-te</button>
           </form>
         </div>
@@ -348,6 +355,7 @@
       </div>
     </div>
   </footer>
+  
   <script src="script.js"></script>
 </body>
 </html>
