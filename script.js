@@ -1,4 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Funcționalitate pentru ascunderea header-ului la scroll
+  let lastScrollTop = 0;
+  const header = document.querySelector('header');
+  const scrollThreshold = 100; // Numărul de pixeli scrollați înainte de a ascunde header-ul
+  
+  window.addEventListener('scroll', function() {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Verificăm dacă am scrollat suficient pentru a activa comportamentul
+    if (currentScroll > scrollThreshold) {
+      // Scrollăm în jos - ascundem header-ul
+      if (currentScroll > lastScrollTop) {
+        header.style.top = `-${header.offsetHeight}px`;
+      } 
+      // Scrollăm în sus - afișăm header-ul
+      else {
+        header.style.top = '0';
+      }
+    }
+    
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Pentru browsere mobile
+  });
+
   // Obținem referințe către butoanele de redirecționare a impozitului
   const taxButtons = document.querySelectorAll('#tax-deduction-link, #tax-deduction-btn');
  
@@ -18,6 +41,30 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
+  
+  // Gestionare formular de contact
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const nume = document.getElementById('nume').value;
+      const email = document.getElementById('email').value;
+      const subiect = document.getElementById('subiect').value;
+      const mesaj = document.getElementById('mesaj').value;
+      
+      // Creăm un mailto link
+      const subject = encodeURIComponent(subiect);
+      const body = encodeURIComponent(`Nume: ${nume}\nEmail: ${email}\n\nMesaj:\n${mesaj}`);
+      const mailtoLink = `mailto:asociatiaadept@yahoo.com?subject=${subject}&body=${body}`;
+      
+      // Deschidem clientul de email
+      window.location.href = mailtoLink;
+      
+      // Mesaj de confirmare
+      alert('Se deschide clientul de email pentru a trimite mesajul.');
+    });
+  }
   
   // Funcție pentru a gestiona stilurile formularului
   function handleFormStyles() {
